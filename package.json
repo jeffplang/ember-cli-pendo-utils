@@ -1,17 +1,23 @@
 {
   "name": "ember-cli-pendo-utils",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "description": "ember-cli-addon for pendo.",
   "keywords": [
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "",
+  "author": {
+    "name": "Allariel",
+    "url": "https://github.com/Allariel"
+  },
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:allariel/ember-cli-pendo-utils.git"
+  },
   "scripts": {
     "build": "ember build",
     "start": "ember server",

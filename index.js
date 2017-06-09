@@ -14,6 +14,8 @@ module.exports = {
         "  o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);" +
         "  y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/" + config['pendo'].apiKey + "/pendo.js';" +
         "  z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');" +
+        "  var opts=JSON.parse('" + JSON.stringify(config['pendo']) + "');" +
+        "  window.pendo.initialize(opts);" +
         "</script>"
     }
   }
