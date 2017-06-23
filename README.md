@@ -12,7 +12,10 @@ Configure your Pendo API key in environment.js
 ```javascript
 // environment.js
 ENV.pendo = {
-  apiKey: 'abc-123'
+  location: 'head', // optional
+  options: {
+      apiKey: 'abc-123'
+  }
 };
 ```
 
