@@ -11,7 +11,7 @@ module.exports = {
     var options = pendo.options || {};
     var location = pendo.location || 'head';
 
-    if (type === location) {
+    if (type === location && config.environment !== 'test') {
       return "<script>" +
         "(function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];" +
         "  v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){" +

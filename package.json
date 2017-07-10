@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-pendo-utils",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "ember-cli-addon for pendo.",
   "keywords": [
     "ember-addon"
