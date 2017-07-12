@@ -19,6 +19,11 @@ module.exports = {
         "  y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/" + options.apiKey + "/pendo.js';" +
         "  z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');" +
         "  var options=JSON.parse('" + JSON.stringify(options) + "');" +
+        "  options.events={"+
+        "   ready:function(){$(window).trigger('pendo.ready');}," +
+        "   guidesLoaded:function(){$(window).trigger('pendo.guidesLoaded');}," +
+        "   guidesFailed:function(){$(window).trigger('pendo.guidesFailed');}" +
+        "  };" +
         "  window.pendo.initialize(options);" +
         "</script>";
     }
