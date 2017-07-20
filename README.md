@@ -42,7 +42,7 @@ window.pendo.updateOptions(options);
 | pendo.events.guidesLoaded 	| Fired when guides have loaded successfully.           	|
 | pendo.events.guidesFailed 	| Fired when guides fail to load.                       	|
 
-###Events Example
+### Events Example
 ```javascript
 $(window).on('pendo.ready', function() {
    console.log('pendo ready!'); 
