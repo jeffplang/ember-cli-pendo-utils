@@ -13,9 +13,7 @@ Configure your Pendo API key in environment.js
 // environment.js
 ENV.pendo = {
   location: 'head', // optional
-  options: {
-      apiKey: 'abc-123'
-  }
+  apiKey: 'abc-123'
 };
 ```
 
@@ -32,7 +30,7 @@ const options = {
     id: 'accountId'
   }
 };
-window.pendo.updateOptions(options);
+window.pendo.initialize(options);
 ```
 
 ## Events
@@ -44,15 +42,19 @@ window.pendo.updateOptions(options);
 
 ### Events Example
 ```javascript
-$(window).on('pendo.ready', function() {
-   console.log('pendo ready!'); 
-});
-
-$(window).on('pendo.guidesLoaded', function() {
-   console.log('pendo guides loaded!'); 
-});
-
-$(window).on('pendo.guidesFailed', function() {
-   console.log('pendo guides failed!'); 
-});
+const options = {
+  visitor: {
+    id: 'userId',
+    email: 'userEmail'
+  },
+  account: {
+    id: 'accountId'
+  },
+  events: {
+    ready: function() {/*...*/},
+    guidesLoaded: function() {/*...*/},
+    guidesFailed: function() {/*...*/}
+  }
+};
+window.pendo.initialize(options);
 ```
