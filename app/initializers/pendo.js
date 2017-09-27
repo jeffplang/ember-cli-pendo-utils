@@ -1,0 +1,1 @@
+export {default, initialize} from 'ember-cli-pendo-utils/initializers/pendo';
