@@ -2,8 +2,10 @@ import Ember from 'ember';
 
 export function initialize() {
     Ember.Router.reopen({
-        pendoPageLoad: function () {
-            window.pendo.pageLoad();
-        }.on('didTransition')
+        pendoPageLoad: Ember.on('didTransition', function () {
+            if (window.pendo !== undefined) {
+              window.pendo.pageLoad();
+            }
+        })
     });
 }
